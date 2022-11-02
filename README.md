@@ -69,3 +69,4 @@ https://user-images.githubusercontent.com/36901822/199588592-7c3e5d58-1ee8-4b36-
 ![image](https://user-images.githubusercontent.com/36901822/199579670-c696e7d8-bcce-4d1c-a1f9-dea26e63733f.png)
 
 
+Coded while petting  <a href="https://www.tokyotech.us/" target="_blank" rel="noreferrer">😸</a> and listening to <a href="https://www.youtube.com/watch?v=DqZhP-Vuxgs" target="_blank" rel="noreferrer">🧃🌎</a>
