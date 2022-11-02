@@ -1,0 +1,19 @@
+.blue-icon{
+    --lwc-colorTextIconDefault: rgb(1, 118, 211);
+}
+
+.green-icon{
+    --lwc-colorTextIconDefault: rgb(11, 134, 0);
+}
+
+.red-icon{
+    --lwc-colorTextIconDefault: rgb(190, 0, 0);
+}
+
+.myBox {
+     background-color: rgb(214, 209, 255);
+}
+
+table tbody tr {
+     height: 3em;
+}

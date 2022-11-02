@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <masterLabel>Amazon s3 Files</masterLabel>
+
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightningCommunity__Default">
+            <property name="recordId" label="Record Id" type="String"></property>
+            <property name="allowUploads" label="Allow Uploads" type="Boolean" default="true"></property>
+            <property name="allowView" label="Allow View" type="Boolean" default="true"></property>
+            <property name="allowDownload" label="Allow Download" type="Boolean" default="true"></property>
+            <property name="allowDelete" label="Allow Delete" type="Boolean" default="true"></property>
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

@@ -1,0 +1,99 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    
+    <template if:true={allowUploads}>
+
+        <div class="slds-box myBox">
+
+            <lightning-input 
+                type="file" 
+                label="Attachment" 
+                onchange={upload} 
+                disabled={disable}
+                multiple
+            ></lightning-input>
+            
+            <template if:true={progress}>
+                <br />
+                <lightning-progress-bar 
+                    value={progress} 
+                    size="large" 
+                    variant="circular"
+                ></lightning-progress-bar>
+            </template>
+
+        </div>
+
+    </template>
+
+    <table>
+        <thead>
+            <th>
+                Name
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+        </thead>
+        <tbody>
+            <template for:each={files} for:item="file">
+                <tr key={file.Key}>
+                    <td>
+                        {file.name}
+                    </td>
+                    
+                    <td>
+                        <template if:true={allowView}>
+
+                            <lightning-button-icon
+                                icon-name="utility:preview"
+                                class="green-icon"
+                                alternative-text="preview"
+                                icon-class="slds-m-around_medium"
+                                data-key={file.Key}
+                                data-name={file.name}
+                                onclick={view}
+                            ></lightning-button-icon>
+
+                        </template>
+                    </td>
+                    
+                    <td>
+                        <template if:true={allowDownload}>
+
+                            <lightning-button-icon
+                                icon-name="utility:download"
+                                class="blue-icon"
+                                alternative-text="download"
+                                icon-class="slds-m-around_medium"
+                                data-key={file.Key}
+                                data-name={file.name}
+                                onclick={download}
+                            ></lightning-button-icon>
+
+                        </template>
+                    </td>
+
+                    <td>
+                        <template if:true={allowDelete}>
+
+                            <lightning-button-icon
+                                icon-name="utility:delete"
+                                class="red-icon"
+                                alternative-text="delete"
+                                icon-class="slds-m-around_medium"
+                                data-key={file.Key}
+                                data-name={file.name}
+                                onclick={remove}
+                            ></lightning-button-icon>
+                        </template>
+                    </td>
+
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>
