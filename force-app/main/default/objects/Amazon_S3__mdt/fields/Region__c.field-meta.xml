@@ -5,7 +5,7 @@
     <fieldManageability>DeveloperControlled</fieldManageability>
     <label>Region</label>
     <length>20</length>
-    <required>false</required>
+    <required>true</required>
     <type>Text</type>
     <unique>false</unique>
 </CustomField>
