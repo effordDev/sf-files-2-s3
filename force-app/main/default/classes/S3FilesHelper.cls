@@ -70,4 +70,3 @@ public with sharing class S3FilesHelper {
         config() {}
     }
 }
-
