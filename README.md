@@ -1,4 +1,10 @@
 # Salesforce Files to Amazon S3
+
+<a href="https://githubsfdeploy.herokuapp.com?owner=effordDev&repo=sf-files-2-s3">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
 ## Setup
 
 ### 1. Create New Bucket in S3
