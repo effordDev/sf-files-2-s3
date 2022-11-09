@@ -29,12 +29,14 @@ export default class AmazonS3Files extends LightningElement {
                }
                this.init = true;
                
+               //load sdk
                await Promise.all([
                     loadScript(this, AWS_SDK),
                ])
 
                this.config = await getConfig({ recordId: this.recordId })
-
+                   
+               //start sdk
                this.loadSDK()
           } catch (error) {
                console.warn(error)
@@ -65,8 +67,6 @@ export default class AmazonS3Files extends LightningElement {
           this.AWS = AWS
 
           this.AWS.config.update(this.awsConfig)
-          // this.AWS.config.credentials = new this.AWS.Credentials(this.awsConfig.accessKeyId, this.awsConfig.secretAccessKey)
-          // this.s3 = new this.AWS.S3()
 
           this.listS3Objects()
      }
