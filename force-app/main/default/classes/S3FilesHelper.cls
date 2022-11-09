@@ -1,4 +1,6 @@
 public with sharing class S3FilesHelper {
+    //Get configuration for AWS SDK
+    
     @AuraEnabled
     public static Config getConfig(Id recordId) {
 
