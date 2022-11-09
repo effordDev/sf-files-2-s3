@@ -105,7 +105,6 @@ export default class AmazonS3Files extends LightningElement {
      }  
      
      /**
-      * 
       * @param {key} file path 
       * @returns url
       * @description handles getting signed url for viwing file
@@ -152,7 +151,6 @@ export default class AmazonS3Files extends LightningElement {
      }
 
      /**
-      * 
       * @param {event}  
       * @returns undefined
       * @description gets signed file url, creates <a>
@@ -195,7 +193,6 @@ export default class AmazonS3Files extends LightningElement {
      }
      
      /**
-      * 
       * @param {event}  
       * @returns undefined
       * @description handles uploading files array
@@ -222,8 +219,7 @@ export default class AmazonS3Files extends LightningElement {
 
      }
       
-     /**
-      * 
+     /** 
       * @param {file} data 
       * @returns new Promise
       * @description handles uploading the file
@@ -278,8 +274,7 @@ export default class AmazonS3Files extends LightningElement {
           })
      }
      
-     /**
-      * 
+     /** 
       * @param {event}  
       * @returns undefined
       * @description handles removing file
@@ -300,8 +295,7 @@ export default class AmazonS3Files extends LightningElement {
           }
      }
      
-     /**
-      * 
+     /** 
       * @param {key} file path
       * @returns new Promise
       * @description deletes object from key file path
