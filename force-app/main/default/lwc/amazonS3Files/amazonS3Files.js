@@ -104,6 +104,12 @@ export default class AmazonS3Files extends LightningElement {
 
      }  
      
+     /**
+      * 
+      * @param {key} file path 
+      * @returns url
+      * @description handles getting signed url for viwing file
+     */
      getFileURL(key) {
 
           try {
@@ -129,7 +135,13 @@ export default class AmazonS3Files extends LightningElement {
                this.loading()
           }
      }
-
+     
+     /**
+      * 
+      * @param {event}  
+      * @returns undefined
+      * @description opens window for signed file url
+     */
      view(event) {
 
           const key = event.target.dataset.key
@@ -139,6 +151,13 @@ export default class AmazonS3Files extends LightningElement {
           window.open(url)
      }
 
+     /**
+      * 
+      * @param {event}  
+      * @returns undefined
+      * @description gets signed file url, creates <a>
+      * and clicks
+     */
      async download(event) {
 
           try {
@@ -174,7 +193,13 @@ export default class AmazonS3Files extends LightningElement {
                this.loading()
           }
      }
-
+     
+     /**
+      * 
+      * @param {event}  
+      * @returns undefined
+      * @description handles uploading files array
+     */
      async upload(event) {
           
           const files = event.target.files
@@ -203,7 +228,6 @@ export default class AmazonS3Files extends LightningElement {
       * @returns new Promise
       * @description handles uploading the file
      */
-
      uploadFile(data) {
 
           const Key = `${this.config.prefix}/${data.name}`
@@ -254,6 +278,12 @@ export default class AmazonS3Files extends LightningElement {
           })
      }
      
+     /**
+      * 
+      * @param {event}  
+      * @returns undefined
+      * @description handles removing file
+     */
      async remove(event) {
 
           const key = event.target.dataset.key
@@ -269,7 +299,13 @@ export default class AmazonS3Files extends LightningElement {
                console.error(error)
           }
      }
-
+     
+     /**
+      * 
+      * @param {key} file path
+      * @returns new Promise
+      * @description deletes object from key file path
+     */
      removeFile(key) {
           
           const params = {
