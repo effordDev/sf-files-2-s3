@@ -36,7 +36,7 @@ Once created, navigate to your new created bucket. Go to the permissions tab and
             "DELETE"
         ],
         "AllowedOrigins": [
-            "YOURE SALESFORCE DOMAIN HERE",
+            "YOUR SALESFORCE DOMAIN HERE",
         ],
         "ExposeHeaders": [
             "Access-Control-Allow-Origin"
