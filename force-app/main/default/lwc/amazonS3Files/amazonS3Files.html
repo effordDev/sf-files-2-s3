@@ -42,7 +42,7 @@
             <template for:each={files} for:item="file">
                 <tr key={file.Key}>
                     <td>
-                        {file.name}
+                        <lightning-icon icon-name={file.type}></lightning-icon> {file.name}
                     </td>
                     
                     <td>
