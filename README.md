@@ -5,6 +5,12 @@
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
+<br />
+
+<a href="https://github.com/jsmithdev/sfdx-deploy-instructions">
+  Deploy via sfdx
+</a>
+
 ## Setup
 
 ### 1. Create New Bucket in S3
