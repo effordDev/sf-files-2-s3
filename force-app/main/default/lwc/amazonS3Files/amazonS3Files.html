@@ -7,7 +7,7 @@
 
             <lightning-input 
                 type="file" 
-                label="Attachment" 
+                label="Attachment (max 5G)" 
                 onchange={upload} 
                 disabled={disable}
                 multiple
@@ -42,7 +42,7 @@
             <template for:each={files} for:item="file">
                 <tr key={file.Key}>
                     <td>
-                        {file.name}
+                        <lightning-icon icon-name={file.type}></lightning-icon> {file.name}
                     </td>
                     
                     <td>

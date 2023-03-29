@@ -1,10 +1,11 @@
 import { api, LightningElement } from 'lwc';
 import { loadScript } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-
+// import { fileTypesMap } from './utilities'
 import AWS_SDK from '@salesforce/resourceUrl/aws';
 
 import getConfig from "@salesforce/apex/S3FilesHelper.getConfig";
+import { fileTypesMap } from './utilities';
 
 const TIMELIMIT = 60 //seconds
 
@@ -62,6 +63,10 @@ export default class AmazonS3Files extends LightningElement {
           return !!this.progress
      }
 
+     // get fileMap() {
+     //      return fileTypesMap()
+     // }
+
      loadSDK() {
 
           this.AWS = AWS
@@ -90,6 +95,13 @@ export default class AmazonS3Files extends LightningElement {
                          this.files = data.Contents.filter(item => item.Size > 0).map(item => {
                               //filter out folder and prefix from name
                               item.name = item.Key.substring(item.Key.lastIndexOf('/') + 1)
+                              const type = (item.name.substring(item.name.lastIndexOf('.') + 1)).toLowerCase()
+
+
+
+                              item.type = `doctype:${fileTypesMap(type)}`
+                              console.log(item.type)
+                              // item.type = type
                               return item
                          })
                     }

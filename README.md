@@ -26,7 +26,7 @@ Block all public access is ```true```
 
 ![image](https://user-images.githubusercontent.com/36901822/199581489-9a9a5545-ba5d-432c-ae27-a9d7361db2e9.png)
 
-Once created, navigate to your new created bucket. Go to the permissions tab and copy the below code into the 'Cross-origin resource sharing (CORS)' settings:
+Once created, navigate to your new created bucket. Go to the permissions tab and copy the below code into the 'Cross-origin resource sharing (CORS)' settings (Be sure to add your salesforce domain in AllowedOrigins (EG https://reidsdevorg2-dev-ed.lightning.force.com)):
 
 ```
 [
@@ -42,7 +42,7 @@ Once created, navigate to your new created bucket. Go to the permissions tab and
             "DELETE"
         ],
         "AllowedOrigins": [
-            "https://reidsdevorg2-dev-ed.lightning.force.com"
+            "YOUR SALESFORCE DOMAIN HERE",
         ],
         "ExposeHeaders": [
             "Access-Control-Allow-Origin"
